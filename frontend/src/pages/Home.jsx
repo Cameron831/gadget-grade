@@ -41,7 +41,7 @@ const Home = () => {
       <Navbar />
       {/* Body of Landing Page */}
       {/* Body div */}
-      <div className="flex flex-col md:mx-[5%] md:my-[5%]">
+      <div className="flex flex-col md:mx-[3%] md:my-[3%]">
         {/* Headline Container */}
         <div className="flex flex-col justify-between">
           {/* Hero Container */}
@@ -50,7 +50,7 @@ const Home = () => {
             <img src={Hero} alt="Hero Image" className="min-w-full" />
           </div>
           {/* Trending Products Container */}
-          <div className="flex flex-col md:mt-[5%] md:border-solid md:border md:border-borderColor">
+          <div className="flex flex-col md:mt-[3%] md:border-solid md:border md:border-borderColor">
             {/* Title */}
             <p className="text-center text-white font-normal bg-backgroundColor p-5">Trending Products</p>
             {/* Products Grid */}
@@ -68,21 +68,21 @@ const Home = () => {
           </div>
           </div>
           {/* Call to Action Container */}
-          <div className="bg-backgroundColor flex flex-col justify-between py-5 gap-y-5 md:mt-[5%]"> 
+          <div className="bg-backgroundColor flex flex-col justify-between py-5 gap-y-5 md:mt-[3%]"> 
             {/* Top Button */}
             <div className="text-center sm:flex sm:justify-evenly sm:items-center">
-              <p className="text-white text-base sm:text-xl font-sans font-normal p-5">Grade your gadgets</p>
-              <a href={sessionStorage.getItem("user") ? "/product-listing/category/all" : "/login"}><button className="bg-buttonColor text-white text-base font-bold font-sans rounded-md px-10 py-5">GRADE NOW</button></a>
+              <p className="text-white text-base sm:text-xl font-sans font-normal p-5" style={{ width: '250px' }}>Grade your gadgets</p>
+              <a href={sessionStorage.getItem("user") ? "/product-listing/category/all" : "/login"}><button className="bg-buttonColor text-white text-base font-bold font-sans rounded-md px-10 py-5" style={{ width: '250px' }}>GRADE NOW</button></a>
             </div>
             {/* Bottom Button */}
             <div className="text-center sm:flex sm:justify-evenly sm:items-center pb-5 sm:pb-0" >
-              <p className="text-white text-base sm:text-xl font-sans font-normal p-5">Find your gadgets</p>
-              <a href="/product-listing/category/all"><button className="bg-buttonColor text-white text-base font-bold font-sans rounded-md px-10 py-5">FIND NOW</button></a>
+              <p className="text-white text-base sm:text-xl font-sans font-normal p-5" style={{ width: '250px' }}>Find your gadgets</p>
+              <a href="/product-listing/category/all"><button className="bg-buttonColor text-white text-base font-bold font-sans rounded-md px-10 py-5" style={{ width: '250px' }} >FIND NOW</button></a>
             </div>
           </div>
         </div>
         {/* Recent Activity Container */}
-        <div className="grid grid-flow-col auto-cols-mobileActivity overflow-x-auto gap-x-10 mx-3 pb-5 md:pb-0 md:mx-0 md:mt-[2%] sm:auto-cols-largeMobileActivity lg:grid-flow-row lg:grid-cols-5 lg:gap-10">
+        <div className="grid grid-flow-col auto-cols-mobileActivity overflow-x-auto gap-x-10 mx-3 pb-5 md:pb-0 md:mx-0 md:mt-[3%] sm:auto-cols-largeMobileActivity lg:grid-flow-row lg:grid-cols-5 lg:gap-10">
           {recentActivities.map(recent => (
             <a href={`/product/${recent.product._id}`} key={recent.image} >
               <div className="flex flex-col border border-solid border-borderColor rounded-md p-5 gap-y-2 shadow-[0_0_10px_0_rgba(0,0,0,0.1)] min-w-full h-full">
